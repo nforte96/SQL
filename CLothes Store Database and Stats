@@ -1,0 +1,24 @@
+CREATE TABLE clothes_store (id INTEGER PRIMARY KEY, product_name TEXT, price INTEGER, brand TEXT, inventory INTEGER);
+
+INSERT INTO clothes_store VALUES
+(1, "shirt", 15, "nike", 28),
+(2, "pants", 25, "levi", 18),
+(3, "jacket", 30, "padagonia", 16),
+(4, "sneakers", 50, "nike", 18),
+(5, "sandals", 48, "birkenstok", 15),
+(6, "socks", 8, "fruit_of_the_loom", 60),
+(7, "shorts", 20, "levi", 22),
+(8, "sweater", 28, "arizona", 25),
+(9, "sunglasses", 17, "rayban", 50),
+(10, "purse", 70, "gucci", 12),
+(11, "belt", 23, "gucci", 14),
+(12, "earrings", 22, "arizona", 16),
+(13, "leggings", 12, "kirkland", 33),
+(14, "boxers", 10, "fruit_of_the_loom", 45),
+(15, "bra", 32, "nike", 26);
+
+--Diplay the database ordered by price.
+SELECT * FROM clothes_store ORDER BY price;
+
+--What is the sum of all the inventory separated by brand?
+SELECT brand, SUM(inventory) FROM clothes_store GROUP BY brand;
